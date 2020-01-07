@@ -1,0 +1,14 @@
+﻿@model MoviesOnDemand.ViewModels.RandomMovieViewModel
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Customers</h2>
+<ul>
+    @foreach (var Customer in Model.Customers)
+    {
+    <p>@Html.ActionLink(Customer.Name, "Edit/"+Customer.id, "Customers", new { area = "" }, new { @class = "nav-link" } )</p>
+    }
+</ul>
+
