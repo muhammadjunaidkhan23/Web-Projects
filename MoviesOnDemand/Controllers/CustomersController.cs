@@ -48,14 +48,9 @@ namespace MoviesOnDemand.Controllers
                         aj = item.Name;
                     }
                 }
-                if (String.IsNullOrWhiteSpace(aj))
-                {
-                    return View("No Such Record is found");
-                }
-                else
-                {
-                    return View(aj);
-                }
+                var cust = new List<Customer>() { new Customer { Name = aj } };
+                var ViewModel = new RandomMovieViewModel() { Customers = cust };
+                return View(ViewModel);
             }
             
         }

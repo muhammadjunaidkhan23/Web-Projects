@@ -1,0 +1,27 @@
+﻿@model MoviesOnDemand.ViewModels.RandomMovieViewModel
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@if (Model.Customers.Count == 0)
+{
+    <text>NO one has rented this movie yet</text>
+}
+else
+{
+<ul>
+    @foreach (var c in Model.Customers)
+    {
+        if (String.IsNullOrEmpty(c.Name))
+        {
+            <h2>Customers</h2>
+            <text>No User with this ID Exists</text>
+        }
+        else
+        {
+            <h2>@c.Name</h2>
+        }
+    }
+    
+</ul>
+}
