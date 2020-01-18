@@ -7,7 +7,9 @@ namespace MoviesOnDemand.Models
 {
     public class Customer
     {
-        public int id { get; set; }
+        public int Id { get; set; }
         public string Name { get; set; }
+        public bool IsSubcribeToNewsLetter { get; set; }
+        public MembershipType MembershipType { get; set; }
     }
 }

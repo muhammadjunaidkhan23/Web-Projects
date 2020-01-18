@@ -15,8 +15,8 @@ namespace MoviesOnDemand.Controllers
         {
             var customers = new List<Customer>
             {
-                new Customer{Name="Muhammad Junaid Khan",id=1},
-                new Customer{Name="Sardar Mudassar",id=2}
+                new Customer{Name="Muhammad Junaid Khan",Id=1},
+                new Customer{Name="Sardar Mudassar",Id=2}
             };
             var ViewModel = new RandomMovieViewModel()
             {
@@ -37,13 +37,13 @@ namespace MoviesOnDemand.Controllers
             {
                 var customers = new List<Customer>
             {
-                new Customer{Name="Muhammad Junaid Khan",id=1},
-                new Customer{Name="Sardar Mudassar",id=2}
+                new Customer{Name="Muhammad Junaid Khan",Id=1},
+                new Customer{Name="Sardar Mudassar",Id=2}
             };
                 var aj = "";
                 foreach (var item in customers)
                 {
-                    if (item.id == id)
+                    if (item.Id == id)
                     {
                         aj = item.Name;
                     }
