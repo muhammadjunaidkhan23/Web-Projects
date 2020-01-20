@@ -20,8 +20,18 @@ else
         else
         {
             <h2>@c.Name</h2>
-        }
+            if (c.IsSubcribeToNewsLetter)
+            {
+                <li class="arrow"><h3>Subcribed Member </h3></li>
+                <li class="arrow"><h4>Membership Type:</h4>@c.MembershipType.Name</li>
+                <li class="arrow"><h4>Membership Duration:</h4>@c.MembershipType.DurationInMonths</li>
+                <li class="arrow"><h4>Discount Rate:</h4>@c.MembershipType.DiscountRate%</li>
+                <li class="arrow"><h4>Paid Fee:</h4>@c.MembershipType.SignUpFee</li>
+            }
+            else
+            {<text> Not Yet Subcribed</text>}
+
     }
-    
+}
 </ul>
 }
